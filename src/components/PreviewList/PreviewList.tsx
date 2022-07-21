@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { ExchangeData, getExchangeData } from "../../helpers/getExchangeData";
+import { ExchangeData, getExchangeList } from "../../helpers/getExchangeList";
+import { Link } from "react-router-dom";
 
 export const PreviewList = () => {
   const [exchanges, setExchanges] = useState<ExchangeData[]>();
 
   useEffect(() => {
     (async function () {
-      const exchangeData = await getExchangeData();
+      const exchangeData = await getExchangeList();
       console.log(exchangeData);
       setExchanges(exchangeData);
     })();
@@ -15,7 +16,7 @@ export const PreviewList = () => {
   return (
     <div>
       {exchanges?.map((exchange) => {
-        return <div>{exchange.name}</div>;
+        return <Link to={`/${exchange.id}`}>{exchange.name}</Link>;
       })}
     </div>
   );

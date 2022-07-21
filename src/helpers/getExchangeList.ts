@@ -15,11 +15,11 @@ export type ExchangeData = {
 
 // will handle errors in component
 
-export const getExchangeData = async (): Promise<ExchangeData[]> => {
+export const getExchangeList = async (): Promise<ExchangeData[]> => {
   const response = await fetch(
     "https://api.coingecko.com/api/v3/exchanges?per_page=10",
     { mode: "cors" }
   );
-  const exchangeData = await response.json();
-  return exchangeData;
+  const exchangeList = await response.json();
+  return exchangeList;
 };
