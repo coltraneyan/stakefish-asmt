@@ -1,12 +1,13 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
+import { PreviewList } from "./components/PreviewList/PreviewList";
 
 function App() {
   return (
     <div>
-      <p>Clean React App</p>
+      <PreviewList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
