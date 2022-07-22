@@ -8,8 +8,6 @@ export type ExchangeData = {
   trade_volume_24h_btc: number;
 };
 
-// will handle errors in component
-
 export const getExchangeList = async (): Promise<ExchangeData[]> => {
   const response = await fetch(
     "https://api.coingecko.com/api/v3/exchanges?per_page=10",

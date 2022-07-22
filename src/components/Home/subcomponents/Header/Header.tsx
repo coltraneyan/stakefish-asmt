@@ -1,15 +1,11 @@
 import { Title, Wrapper } from "./Header.styles";
 import ExchangeRabbit from "../../../../assets/ExchangeRabbit.svg";
 
-export type HeaderProps = {
-  text: String;
-};
-
-export const Header: React.FC<HeaderProps> = ({ text }) => {
+export const Header = () => {
   return (
     <Wrapper>
       <img src={ExchangeRabbit} alt="" />
-      <Title>{text}</Title>
+      <Title>Exchange Rabbit</Title>
     </Wrapper>
   );
 };

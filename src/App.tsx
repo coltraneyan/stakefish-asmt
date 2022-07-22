@@ -1,5 +1,3 @@
-import React from "react";
-import "./App.css";
 import { ExchangePage } from "./components/ExchangePage/ExchangePage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Home } from "./components/Home/Home";

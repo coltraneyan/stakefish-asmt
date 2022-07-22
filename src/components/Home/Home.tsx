@@ -4,7 +4,7 @@ import { PreviewList } from "./subcomponents/PreviewList/PreviewList";
 export const Home = () => {
   return (
     <div>
-      <Header text={"Exchange Rabbit"} />
+      <Header />
       <PreviewList />
     </div>
   );

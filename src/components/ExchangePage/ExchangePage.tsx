@@ -7,21 +7,25 @@ import { ExchangeInfo } from "./subcomponents/ExchangeInfo/ExchangeInfo";
 
 export const ExchangePage = () => {
   const [exchange, setExchange] = useState<ExchangeByIDData>();
+  const [delay, setDelay] = useState<Boolean>(true);
 
   let { id } = useParams();
 
   useEffect(() => {
     (async function () {
       const exchangeData = await getExchangeByID(id || "binance");
-      console.log(exchangeData);
       setExchange(exchangeData);
+      setDelay(false);
     })();
   }, []);
 
   return (
     <div>
       <PageHeader />
-      <ExchangeInfo exchange={exchange} />
+      {/* no use of true loading screen, 
+      as the API delay is short enough that a simple delay 
+      method to display all data at once is sufficient (ms)  */}
+      <>{delay || <ExchangeInfo exchange={exchange} />}</>
     </div>
   );
 };
