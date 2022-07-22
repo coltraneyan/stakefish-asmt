@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getExchangeByID } from "../../helpers/getExchangeByID";
 import { ExchangeData } from "../../helpers/getExchangeList";
+import { Link } from "react-router-dom";
 
 export const ExchangePage = () => {
   const [exchange, setExchange] = useState<ExchangeData>();
@@ -18,6 +19,7 @@ export const ExchangePage = () => {
 
   return (
     <div>
+      <Link to={"/"}>BACK</Link>
       <div>{exchange?.name}</div>
     </div>
   );

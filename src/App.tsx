@@ -1,14 +1,16 @@
 import React from "react";
 import "./App.css";
-import { PreviewList } from "./components/PreviewList/PreviewList";
 import { ExchangePage } from "./components/ExchangePage/ExchangePage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Home } from "./components/Home/Home";
+import GlobalCSS from "./global.styles";
 
 export const App = () => {
   return (
     <BrowserRouter>
+      <GlobalCSS />
       <Routes>
-        <Route path="/" element={<PreviewList />} />
+        <Route path="/" element={<Home />} />
         <Route path="/:id" element={<ExchangePage />} />
       </Routes>
     </BrowserRouter>
