@@ -1,16 +1,11 @@
 export type ExchangeData = {
-  id: String;
-  name: String;
-  year_established: Number;
-  country: String;
-  description: String;
+  id: string;
+  name: string;
+  year_established: number;
+  country: string;
   url: string;
-  image: String;
-  has_trading_incentive: Boolean;
-  trust_score: Number;
-  trust_score_rank: Number;
-  trade_volume_24h_btc: Number;
-  trade_volume_24h_btc_normalized: Number;
+  image: string;
+  trade_volume_24h_btc: number;
 };
 
 // will handle errors in component

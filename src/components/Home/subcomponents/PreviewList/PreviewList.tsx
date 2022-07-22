@@ -25,7 +25,7 @@ export const PreviewList = () => {
           <ListItem>
             {index < 9 && "0"}
             {index + 1}
-            <Link to={`/${exchange.id}`}>
+            <Link to={`/${exchange.id}`} key={exchange.id}>
               <ExchangePreview exchange={exchange} />
             </Link>
           </ListItem>
