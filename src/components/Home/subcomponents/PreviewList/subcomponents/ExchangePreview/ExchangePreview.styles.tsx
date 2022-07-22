@@ -42,9 +42,8 @@ export const Volume = styled.div`
   margin-left: auto;
 `;
 
-export const TrustScore = styled.div`
+export const URL = styled.div`
   color: grey;
-  width: fit-content;
   font-size: 90%;
   margin-left: auto;
 `;

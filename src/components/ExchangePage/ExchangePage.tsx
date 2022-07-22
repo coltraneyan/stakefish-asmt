@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getExchangeByID } from "../../helpers/getExchangeByID";
-import { ExchangeData } from "../../helpers/getExchangeList";
-import { Link } from "react-router-dom";
+import { ExchangeByIDData } from "../../helpers/getExchangeByID";
+import { PageHeader } from "./subcomponents/PageHeader/PageHeader";
+import { ExchangeInfo } from "./subcomponents/ExchangeInfo/ExchangeInfo";
 
 export const ExchangePage = () => {
-  const [exchange, setExchange] = useState<ExchangeData>();
+  const [exchange, setExchange] = useState<ExchangeByIDData>();
 
   let { id } = useParams();
 
@@ -19,8 +20,8 @@ export const ExchangePage = () => {
 
   return (
     <div>
-      <Link to={"/"}>BACK</Link>
-      <div>{exchange?.name}</div>
+      <PageHeader />
+      <ExchangeInfo exchange={exchange} />
     </div>
   );
 };

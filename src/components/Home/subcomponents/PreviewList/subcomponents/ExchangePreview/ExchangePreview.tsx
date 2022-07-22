@@ -8,7 +8,7 @@ import {
   Volume,
   Wrapper,
   Label,
-  TrustScore,
+  URL,
 } from "./ExchangePreview.styles";
 
 export type ExchangePreviewProps = {
@@ -29,9 +29,10 @@ export const ExchangePreview: React.FC<ExchangePreviewProps> = ({
           <Name>{exchange.name}</Name>
 
           <Description>
-            <>
-              {exchange.country} · {exchange.year_established}
-            </>
+            {exchange.country +
+              ((exchange.year_established &&
+                ` · ` + exchange.year_established) ||
+                "")}
           </Description>
         </FlexColumn>
       </FlexRow>
@@ -43,9 +44,13 @@ export const ExchangePreview: React.FC<ExchangePreviewProps> = ({
             {exchange.trade_volume_24h_btc.toFixed().toString()} BTC
           </Volume>
         </FlexRow>
-        <TrustScore>
-          <>TS{exchange.trust_score}</>
-        </TrustScore>
+        <URL>
+          {exchange?.url[8] !== "w" && "www."}
+          {exchange?.url.slice(
+            8,
+            exchange?.url.slice(-1) === "/" ? -1 : undefined
+          )}
+        </URL>
       </FlexColumn>
     </Wrapper>
   );

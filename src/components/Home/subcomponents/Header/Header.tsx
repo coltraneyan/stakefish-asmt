@@ -1,5 +1,5 @@
 import { Title, Wrapper } from "./Header.styles";
-import ExchangeRabbit from "./assets/ExchangeRabbit.svg";
+import ExchangeRabbit from "../../../../assets/ExchangeRabbit.svg";
 
 export type HeaderProps = {
   text: String;
