@@ -35,14 +35,14 @@ export const Label = styled.div`
   font-weight: bold;
 `;
 export const TitleWrapper = styled.div`
-  border-bottom: 1px solid blue;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  font-size: 150%;
-  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
+  font-size: 150%;
+  font-weight: bold;
+  border-bottom: 1px solid blue;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
 
   & img {

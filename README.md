@@ -25,3 +25,4 @@ Exchange rabbit is a tool that provides the 10 most trusted and high-volume cryp
 - Increased componentization, especially on logic heavy renders
 - More comprehensive e2e testing
 - UI improvements, such as light/dark mode with styled-components
+- helper functions to clean API data for cohesive and expected results

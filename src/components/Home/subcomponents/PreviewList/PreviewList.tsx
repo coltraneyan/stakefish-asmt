@@ -13,7 +13,7 @@ export const PreviewList = () => {
   useEffect(() => {
     (async function () {
       const exchangeData = await getExchangeList();
-      console.log(exchangeData);
+      console.log(exchangeData[7]);
       setExchanges(exchangeData);
     })();
   }, []);

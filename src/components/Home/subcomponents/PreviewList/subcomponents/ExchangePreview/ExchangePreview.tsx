@@ -39,12 +39,11 @@ export const ExchangePreview: React.FC<ExchangePreviewProps> = ({
 
       <FlexColumn>
         <FlexRow>
-          <Label>24H Vol: </Label>
+          <Label>24H Vol:</Label>
           <Volume>{exchange.trade_volume_24h_btc.toFixed()} BTC</Volume>
         </FlexRow>
         <URL>
-          {/* due to nature of data returned, found this to be the simplest method to return cohesive url names */}
-          {exchange?.url[8] !== "w" && "www."}
+          {/* due to nature of data returned, found this to be the simplest method to return mostly cohesive url names */}
           {exchange?.url.slice(
             8,
             exchange?.url.slice(-1) === "/" ? -1 : undefined
